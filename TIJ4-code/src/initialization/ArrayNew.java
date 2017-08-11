@@ -1,7 +1,9 @@
 //: initialization/ArrayNew.java
 // Creating arrays with new.
-import java.util.*;
 import static net.mindview.util.Print.*;
+
+import java.util.Arrays;
+import java.util.Random;
 
 public class ArrayNew {
   public static void main(String[] args) {

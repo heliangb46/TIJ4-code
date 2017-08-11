@@ -1,7 +1,9 @@
 //: initialization/ArrayClassObj.java
 // Creating an array of nonprimitive objects.
-import java.util.*;
 import static net.mindview.util.Print.*;
+
+import java.util.Arrays;
+import java.util.Random;
 
 public class ArrayClassObj {
   public static void main(String[] args) {
