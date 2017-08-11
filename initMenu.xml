@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cedu:menus xmlns:cedu="http://www.chinaedu.net/menuSchma" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.chinaedu.net/menuSchma ../../../../../../bin/ws/com/chinaedu/test/xml/menuSchma.xsd ">
+  <cedu:menu>
+    <cedu:parentCode value="0"/>
+    <cedu:info code="0" depth="0" name="" sequence="0" state="0"/>
+  </cedu:menu>
+</cedu:menus>
