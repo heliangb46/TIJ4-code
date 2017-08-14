@@ -6,15 +6,24 @@ package innerclasses;
 import innerclasses.controller.Event;
 
 public class GreenhouseController {
-    public static void main(String[] args) {
-        GreenhouseControls gc = new GreenhouseControls();
+    public static void main(String[] args) throws InterruptedException {
+        GreenhouseControls greenhouseControls = new GreenhouseControls();
         // Instead of hard-wiring, you could parse
         // configuration information from a text file here:
-        gc.addEvent(gc.new Bell(900));
-        Event[] eventList = { gc.new ThermostatNight(0), gc.new LightOn(200), gc.new LightOff(400), gc.new WaterOn(600), gc.new WaterOff(800), gc.new ThermostatDay(1400) };
-        gc.addEvent(gc.new Restart(2000, eventList));
-        if (args.length == 1) gc.addEvent(new GreenhouseControls.Terminate(new Integer(args[0])));
-        gc.run();
+        greenhouseControls.addEvent(greenhouseControls.new Bell(900));
+        Event[] eventList = { //
+                greenhouseControls.new ThermostatNight(0), //
+                greenhouseControls.new LightOn(200), //
+                greenhouseControls.new LightOff(400), //
+                greenhouseControls.new WaterOn(600), //
+                greenhouseControls.new WaterOff(800), //
+                greenhouseControls.new ThermostatDay(1400) //
+        };
+        greenhouseControls.addEvent(greenhouseControls.new Restart(2000, eventList));
+        //        if (args.length == 1) {
+        //            greenhouseControls.addEvent(new GreenhouseControls.Terminate(new Integer(args[0])));
+        //        }
+        greenhouseControls.run();
     }
 } /* Output:
   Bing!

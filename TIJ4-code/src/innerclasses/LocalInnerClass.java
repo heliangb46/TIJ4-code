@@ -9,6 +9,10 @@ interface Counter {
     int next();
 }
 
+/**
+ * @category innerClass
+ *
+ */
 public class LocalInnerClass {
     private int count = 0;
 
