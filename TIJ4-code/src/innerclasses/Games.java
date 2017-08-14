@@ -13,11 +13,11 @@ interface GameFactory {
 }
 
 class Checkers implements Game {
+    private static final int MOVES = 3;
+    private int moves = 0;
+
     private Checkers() {
     }
-
-    private int moves = 0;
-    private static final int MOVES = 3;
 
     @Override
     public boolean move() {
@@ -65,7 +65,8 @@ public class Games {
         playGame(Checkers.factory);
         playGame(Chess.factory);
     }
-} /* Output:
+}
+/* Output:
   Checkers move 0
   Checkers move 1
   Checkers move 2
