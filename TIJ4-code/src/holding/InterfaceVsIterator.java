@@ -9,8 +9,7 @@ import java.util.Map;
 import java.util.Set;
 
 //: holding/InterfaceVsIterator.java
-import typeinfo.pets.Pet;
-import typeinfo.pets.Pets;
+import typeinfo.pets.*;
 
 public class InterfaceVsIterator {
     public static void display(Iterator<Pet> it) {

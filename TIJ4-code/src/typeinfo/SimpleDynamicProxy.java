@@ -6,7 +6,6 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 class DynamicProxyHandler implements InvocationHandler {
-
     private Object proxied;
 
     public DynamicProxyHandler(Object proxied) {
@@ -16,30 +15,10 @@ class DynamicProxyHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("**** proxy: " + proxy.getClass() + ", method: " + method + ", args: " + args);
-        if (args != null) {
-            for (Object arg : args) {
-                System.out.println("  " + arg);
-            }
-        }
+        if (args != null) for (Object arg : args)
+            System.out.println("  " + arg);
         return method.invoke(proxied, args);
     }
-}
-
-class myDynamicProxyHandler implements InvocationHandler {
-
-    private Object obj;
-
-    public myDynamicProxyHandler(Object obj) {
-        this.obj = obj;
-    }
-
-    @Override
-    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("my proxy - - - -- - - - - -");
-        method.invoke(obj, args);
-        return null;
-    }
-
 }
 
 class SimpleDynamicProxy {
@@ -50,15 +29,11 @@ class SimpleDynamicProxy {
 
     public static void main(String[] args) {
         RealObject real = new RealObject();
-        //        consumer(real);
+        consumer(real);
         // Insert a proxy and call again:
         Interface proxy = (Interface) Proxy
-                .newProxyInstance(Interface.class.getClassLoader(), new Class[] { Interface.class, Comparable.class }, new DynamicProxyHandler(real));
+                .newProxyInstance(Interface.class.getClassLoader(), new Class[] { Interface.class }, new DynamicProxyHandler(real));
         consumer(proxy);
-
-        //        proxy = (Interface) Proxy
-        //                .newProxyInstance(Interface.class.getClassLoader(), new Class[] { Interface.class }, new myDynamicProxyHandler(real));
-        //        consumer(proxy);
     }
 } /* Output: (95% match)	
   doSomething

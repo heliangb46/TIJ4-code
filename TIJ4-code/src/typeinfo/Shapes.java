@@ -40,8 +40,7 @@ public class Shapes {
         for (Shape shape : shapeList)
             shape.draw();
     }
-}
-/* Output:
+} /* Output:
   Circle.draw()
   Square.draw()
   Triangle.draw()

@@ -49,17 +49,14 @@ public class MultiIterableClass extends IterableClass {
 
     public static void main(String[] args) {
         MultiIterableClass mic = new MultiIterableClass();
-        for (String s : mic.reversed()) {
+        for (String s : mic.reversed())
             System.out.print(s + " ");
-        }
         System.out.println();
-        for (String s : mic.randomized()) {
+        for (String s : mic.randomized())
             System.out.print(s + " ");
-        }
         System.out.println();
-        for (String s : mic) {
+        for (String s : mic)
             System.out.print(s + " ");
-        }
     }
 } /* Output:
   banana-shaped. be to Earth the know we how is that And

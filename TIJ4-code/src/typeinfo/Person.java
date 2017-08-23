@@ -1,8 +1,5 @@
 package typeinfo;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 //: typeinfo/Person.java
 // A class with a Null Object.
 import net.mindview.util.Null;
@@ -36,11 +33,4 @@ class Person {
     }
 
     public static final Person NULL = new NullPerson();
-
-    public static void main(String[] args) {
-        Person p = Person.NULL;
-        Collection<Person> list = new ArrayList<Person>();
-        list.add(p);
-        System.out.println(p.first);
-    }
 } ///:~
