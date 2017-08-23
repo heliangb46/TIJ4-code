@@ -5,10 +5,4 @@ package io;
 import java.io.Serializable;
 
 public class Alien implements Serializable {
-    private String name = "alien";
-
-    @Override
-    public String toString() {
-        return super.toString() + "name : " + name;
-    }
 } ///:~
