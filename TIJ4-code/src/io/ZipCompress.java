@@ -22,6 +22,9 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
+/**
+ * zip压缩，解压缩 使用但不局限与文件
+ */
 public class ZipCompress {
     public static void main(String[] args) throws IOException {
         FileOutputStream f = new FileOutputStream("test.zip");

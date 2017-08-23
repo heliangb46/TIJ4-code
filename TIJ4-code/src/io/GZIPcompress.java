@@ -12,11 +12,16 @@ import java.io.InputStreamReader;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
+/**
+ *  .gz压缩，解压缩
+ */
 public class GZIPcompress {
     public static void main(String[] args) throws IOException {
         if (args.length == 0) {
-            System.out.println("Usage: \nGZIPcompress file\n" + "\tUses GZIP compression to compress " + "the file to test.gz");
-            System.exit(1);
+            args = new String[1];
+            args[0] = "src/io/GZIPcompress.java";
+            //            System.out.println("Usage: \nGZIPcompress file\n" + "\tUses GZIP compression to compress " + "the file to test.gz");
+            //            System.exit(1);
         }
         BufferedReader in = new BufferedReader(new FileReader(args[0]));
         BufferedOutputStream out = new BufferedOutputStream(new GZIPOutputStream(new FileOutputStream("test.gz")));

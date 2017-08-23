@@ -25,11 +25,6 @@ class Initable3 {
     }
 }
 
-/**
- * 加载
- * 连接
- * 初始化
- */
 public class ClassInitialization {
     public static Random rand = new Random(47);
 
@@ -42,7 +37,7 @@ public class ClassInitialization {
         System.out.println(Initable.staticFinal2);
         // Does trigger initialization:
         System.out.println(Initable2.staticNonFinal);
-        Class initable3 = Class.forName("typeinfo.Initable3");
+        Class initable3 = Class.forName("Initable3");
         System.out.println("After creating Initable3 ref");
         System.out.println(Initable3.staticNonFinal);
     }

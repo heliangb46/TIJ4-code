@@ -14,21 +14,15 @@ import typeinfo.pets.Pet;
 import typeinfo.pets.Pets;
 
 public class PetCount3 {
-
-    @SuppressWarnings("serial")
     static class PetCounter extends LinkedHashMap<Class<? extends Pet>, Integer> {
-
         public PetCounter() {
             super(MapData.map(LiteralPetCreator.allTypes, 0));
         }
 
         public void count(Pet pet) {
             // Class.isInstance() eliminates instanceofs:
-            for (Map.Entry<Class<? extends Pet>, Integer> pair : entrySet()) {
-                if (pair.getKey().isInstance(pet)) {
-                    put(pair.getKey(), pair.getValue() + 1);
-                }
-            }
+            for (Map.Entry<Class<? extends Pet>, Integer> pair : entrySet())
+                if (pair.getKey().isInstance(pet)) put(pair.getKey(), pair.getValue() + 1);
         }
 
         @Override
@@ -55,7 +49,6 @@ public class PetCount3 {
         print();
         print(petCount);
     }
-
 } /* Output:
   Rat Manx Cymric Mutt Pug Cymric Pug Manx Cymric Rat EgyptianMau Hamster EgyptianMau Mutt Mutt Cymric Mouse Pug Mouse Cymric
   {Pet=20, Dog=6, Cat=9, Rodent=5, Mutt=3, Pug=3, EgyptianMau=2, Manx=7, Cymric=5, Rat=2, Mouse=2, Hamster=1}

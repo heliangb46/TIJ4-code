@@ -24,9 +24,8 @@ public class FilledList<T> {
     public List<T> create(int nElements) {
         List<T> result = new ArrayList<T>();
         try {
-            for (int i = 0; i < nElements; i++) {
+            for (int i = 0; i < nElements; i++)
                 result.add(type.newInstance());
-            }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

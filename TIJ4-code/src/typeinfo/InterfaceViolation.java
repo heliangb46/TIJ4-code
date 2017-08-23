@@ -1,4 +1,3 @@
-
 package typeinfo;
 
 //: typeinfo/InterfaceViolation.java

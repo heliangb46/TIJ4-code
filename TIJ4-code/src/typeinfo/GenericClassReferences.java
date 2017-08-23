@@ -8,6 +8,6 @@ public class GenericClassReferences {
         Class<Integer> genericIntClass = int.class;
         genericIntClass = Integer.class; // Same thing
         intClass = double.class;
-        //         genericIntClass = double.class; // Illegal
+        // genericIntClass = double.class; // Illegal
     }
 } ///:~

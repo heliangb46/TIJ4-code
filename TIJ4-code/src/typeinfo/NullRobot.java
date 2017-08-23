@@ -11,7 +11,6 @@ import java.util.List;
 import net.mindview.util.Null;
 
 class NullRobotProxyHandler implements InvocationHandler {
-
     private String nullName;
     private Robot proxied = new NRobot();
 

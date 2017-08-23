@@ -9,9 +9,7 @@ class Position {
     public Position(String jobTitle, Person employee) {
         title = jobTitle;
         person = employee;
-        if (person == null) {
-            person = Person.NULL;
-        }
+        if (person == null) person = Person.NULL;
     }
 
     public Position(String jobTitle) {
